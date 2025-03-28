@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Doanh thu bán hàng theo Tháng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+    </div>
+
+    <div class="comment-green">
+        <p>Tháng bán chạy nhất: <strong>T12</strong>
+        → Doanh thu: <strong>750,085,000 VND</strong> | Số lượng: <strong>14,496 SKU</strong></p>
+        
+        <p>Tháng bán kém nhất: <strong>T4</strong>
+        → Doanh thu: <strong>196,365,000 VND</strong> | Số lượng: <strong>3,621 SKU</strong></p>
+    </div>
+    
+    <div class="comment-red">
+        <p>- Tháng bán chạy nhất - Tháng 12</p>
+        <p>- Doanh thu: 750,085,000 VNĐ</p>
+        <p>- Số lượng bán: 14,496 SKU</p>
+        <p>- Lý do bán chạy:</p>
+        <ul>
+            <li>Nhu cầu mua sắm tăng cao: Tháng 12 trùng với mùa lễ hội cuối năm như Giáng Sinh, Tết Dương lịch, nhiều người mua trà, bột và các sản phẩm sức khỏe làm quà tặng.</li>
+            <li>Các chương trình khuyến mãi: Đây là thời điểm nhiều doanh nghiệp tung ra các chương trình giảm giá, combo khuyến mãi kích cầu mua sắm.</li>
+            <li>Tâm lý tiêu dùng: Cuối năm, khách hàng có xu hướng chi tiêu mạnh hơn, đặc biệt cho thực phẩm sức khỏe.</li>
+        </ul>
+        
+        <p>- Tháng bán kém nhất - Tháng 4</p>
+        <p>- Doanh thu: 196,365,000 VNĐ</p>
+        <p>- Số lượng bán: 3,621 SKU</p>
+        <p>- Lý do bán kém:</p>
+        <ul>
+            <li>Không có nhiều dịp lễ lớn: Tháng 4 không có các ngày lễ kích thích tiêu dùng như Tết, Trung thu hay Giáng Sinh.</li>
+            <li>Tâm lý tiết kiệm: Sau Tết Nguyên Đán (tháng 1-2), khách hàng thường cắt giảm chi tiêu để cân đối tài chính cá nhân.</li>
+            <li>Thời tiết giao mùa: Tháng 4 bắt đầu vào mùa hè, nhu cầu sử dụng trà thảo mộc có thể giảm do xu hướng chuyển sang đồ uống mát lạnh.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q3.js' %}"></script>
+</body>
+</html>

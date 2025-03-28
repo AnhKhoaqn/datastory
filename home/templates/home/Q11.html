@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Phân phối lượt mua hàng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-red">
+        <p>- <strong>Số lần mua lặp lại cao nhất:</strong> 1 lần (chiếm tỷ lệ lớn nhất).</p>
+        <p>- <strong>Phân bố mức mua:</strong></p>
+        <ul>
+            <li>Nhóm mua ít: Khách hàng mua 1-3 lần/năm chiếm phần lớn.</li>
+            <li>Nhóm trung bình: 4-10 lần/năm.</li>
+            <li>Nhóm mua nhiều: Trên 10 lần/năm (rất ít khách hàng).</li>
+        </ul>
+        <p>- <strong>Xu hướng:</strong></p>
+        <ul>
+            <li>Có sự sụt giảm mạnh sau lần mua đầu tiên, cho thấy nhiều khách hàng không quay lại mua hàng.</li>
+            <li>Một số ít khách hàng trung thành tiếp tục mua hàng nhiều lần.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q11.js' %}"></script>
+</body>
+</html>

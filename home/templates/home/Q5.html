@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Doanh thu bán hàng theo Ngày trong tháng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-green">
+        <p>Ngày trong tháng bán chạy nhất: <strong>Ngày 17</strong>
+        → Doanh thu: <strong>14,263,333 VND</strong> | Số lượng: <strong>272 SKU</strong></p>
+        
+        <p>Ngày trong tháng bán kém nhất: <strong>Ngày 31</strong>
+        → Doanh thu: <strong>11,655,571 VND</strong> | Số lượng: <strong>220 SKU</strong></p>
+    </div>
+    
+    <div class="comment-red">
+        <p>- Ngày bán chạy nhất - Ngày 17</p>
+        <p>- Doanh thu trung bình: 14,263,333 VNĐ</p>
+        <p>- Số lượng bán trung bình: 272 SKU</p>
+        <p>- Lý do bán chạy:</p>
+        <ul>
+            <li>Thời điểm giữa tháng: Ngày 17 thường rơi vào giai đoạn giữa tháng, khi nhiều người đã nhận lương (đối với những công ty trả lương vào đầu tháng). Đây là lúc khách hàng có xu hướng chi tiêu mạnh hơn.</li>
+            <li>Khuyến mãi giữa tháng: Một số sàn thương mại điện tử và cửa hàng tổ chức ưu đãi vào giữa tháng để kích cầu mua sắm.</li>
+            <li>Tâm lý khách hàng: Sau nửa tháng làm việc, người tiêu dùng có xu hướng mua sắm để giải tỏa căng thẳng hoặc chuẩn bị cho nhu cầu cuối tháng.</li>
+        </ul>
+        
+        <p>- Ngày bán kém nhất - Ngày 31</p>
+        <p>- Doanh thu trung bình: 11,655,571 VNĐ</p>
+        <p>- Số lượng bán trung bình: 220 SKU</p>
+        <p>- Lý do bán kém:</p>
+        <ul>
+            <li>Không phải tháng nào cũng có ngày 31: Một số tháng chỉ có 30 ngày (tháng 2 thậm chí chỉ có 28-29 ngày), làm cho ngày 31 ít xuất hiện hơn, dẫn đến doanh số thấp hơn.</li>
+            <li>Cận cuối tháng - Tâm lý tiết kiệm: Nhiều người đã chi tiêu hết ngân sách trong tháng và có xu hướng hạn chế mua sắm, đợi đến đầu tháng sau khi nhận lương.</li>
+            <li>Ít chương trình khuyến mãi: Ngày 31 không phải thời điểm phổ biến cho các chương trình khuyến mãi lớn, vì các doanh nghiệp thường tập trung vào dịp đầu hoặc giữa tháng.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q5.js' %}"></script>
+</body>
+</html>

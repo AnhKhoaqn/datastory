@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Xác suất bán hàng của Nhóm Hàng theo Tháng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-red">
+        <p>- <strong>[TMX] Trà mix</strong></p>
+        <ul>
+            <li>Tháng cao nhất: T07 (~65%)</li>
+            <li>Tháng thấp nhất: T01 (~40%)</li>
+            <li>Xu hướng: Tăng mạnh từ T03 đến T07, sau đó giảm nhẹ và ổn định.</li>
+            <li>Nguyên nhân: Mùa hè (T05-T07) có thể khiến nhu cầu trà mix tăng do nhu cầu pha chế trà lạnh, trà đá.</li>
+        </ul>
+        
+        <p>- <strong>[TTC] Trà củ, quả sấy</strong></p>
+        <ul>
+            <li>Tháng cao nhất: T11 (~68%)</li>
+            <li>Tháng thấp nhất: T03 (~38%)</li>
+            <li>Xu hướng: Ổn định đầu năm, tăng mạnh từ T09 đến T11.</li>
+            <li>Nguyên nhân: Gần cuối năm, nhu cầu quà biếu tăng, đặc biệt trà củ, quả sấy thường được dùng trong dịp lễ Tết.</li>
+        </ul>
+        
+        <p>- <strong>[BOT] Bột trà</strong></p>
+        <ul>
+            <li>Tháng cao nhất: T11 (~50%)</li>
+            <li>Tháng thấp nhất: T02 (~30%)</li>
+            <li>Xu hướng: Tăng dần từ T02 đến T11.</li>
+            <li>Nguyên nhân: Cuối năm có thể là thời điểm các sản phẩm bột trà được sử dụng nhiều hơn trong pha chế đồ uống và làm bánh.</li>
+        </ul>
+        
+        <p>- <strong>[THO] Trà hoa</strong></p>
+        <ul>
+            <li>Tháng cao nhất: T07 (~60%)</li>
+            <li>Tháng thấp nhất: T02 (~40%)</li>
+            <li>Xu hướng: Tăng mạnh vào mùa hè, giảm vào đầu năm.</li>
+            <li>Nguyên nhân: Thời tiết nóng có thể khiến nhu cầu trà hoa tăng do tính thanh mát, giải nhiệt.</li>
+        </ul>
+        
+        <p>- <strong>[SET] Set trà</strong></p>
+        <ul>
+            <li>Tháng cao nhất: T11 (~35%)</li>
+            <li>Tháng thấp nhất: T06 (~22%)</li>
+            <li>Xu hướng: Ổn định ở mức thấp, chỉ tăng vào cuối năm.</li>
+            <li>Nguyên nhân: Chủ yếu được mua vào mùa quà tặng (cuối năm, Tết).</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q8.js' %}"></script>
+</body>
+</html>

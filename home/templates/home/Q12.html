@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Phân phối mức chi trả theo Khách hàng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-red">
+        <h4>1. Phân tích chi tiết</h4>
+        <ul>
+            <li><strong>Nhóm chi tiêu thấp (phổ biến nhất):</strong> Dưới 500K – 1M, chiếm phần lớn số lượng khách hàng.</li>
+            <li><strong>Nhóm chi tiêu trung bình:</strong> 1M – 2M, số lượng khách hàng giảm dần.</li>
+            <li><strong>Nhóm chi tiêu cao:</strong> Trên 2M, rất ít khách hàng đạt mức này.</li>
+        </ul>
+        <p>- <strong>Xu hướng tổng quát:</strong></p>
+        <ul>
+            <li>Số khách hàng chi tiêu ít cao hơn hẳn so với số khách hàng chi tiêu nhiều.</li>
+            <li>Một số khách hàng có chi tiêu rất cao, có thể là nhóm doanh nghiệp hoặc khách hàng trung thành.</li>
+        </ul>
+        
+        <h4>2. Nguyên nhân & Giải thích</h4>
+        <p>- <strong>Lý do đa số khách hàng chi tiêu thấp:</strong></p>
+        <ul>
+            <li>Sản phẩm/dịch vụ có mức giá thấp, nhiều khách hàng chỉ thực hiện giao dịch nhỏ.</li>
+            <li>Khách hàng mua sắm theo nhu cầu nhỏ lẻ, không có nhu cầu chi tiêu lớn.</li>
+            <li>Chưa có nhiều chương trình kích thích mua hàng giá trị cao.</li>
+        </ul>
+        <p>- <strong>Lý do một số ít khách hàng chi tiêu cao:</strong></p>
+        <ul>
+            <li>Nhóm khách hàng trung thành hoặc doanh nghiệp mua sắm với số lượng lớn.</li>
+            <li>Các khách hàng này có thể mua gói sản phẩm cao cấp hoặc đặt hàng nhiều lần.</li>
+            <li>Chính sách ưu đãi hoặc dịch vụ đặc biệt có thể thúc đẩy nhóm này chi tiêu nhiều hơn.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q12.js' %}"></script>
+</body>
+</html>

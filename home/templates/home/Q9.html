@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Xác suất bán hàng của Mặt hàng theo Nhóm hàng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-red">
+        <p>- <strong>[BOT] Bột trà</strong></p>
+        <ul>
+            <li>Chỉ có một mặt hàng duy nhất: [BOT01] Bột cần tây</li>
+            <li>Nhận định: Không có sự so sánh trong nhóm này, nhưng bột cần tây có thể nhắm đến khách hàng quan tâm sức khỏe.</li>
+        </ul>
+        
+        <p>- <strong>[SET] Set trà</strong></p>
+        <ul>
+            <li>Mặt hàng bán dễ nhất: [SET03] Set 10 gói trà hoa cúc trắng (21.12%)</li>
+            <li>Mặt hàng bán khó nhất: [SET07] Set 10 gói trà cam sả quế (9.37%)</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà hoa cúc trắng phổ biến, dễ uống, hợp với nhiều đối tượng.</li>
+                    <li>Trà cam sả quế có hương vị đặc trưng, kén người uống hơn.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>- <strong>[THO] Trà hoa</strong></p>
+        <ul>
+            <li>Mặt hàng bán dễ nhất: [THO03] Trà hoa cúc trắng (28.74%)</li>
+            <li>Mặt hàng bán khó nhất: [THO04] Trà nụ hoa hồng Tây Tạng (15.45%)</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà hoa cúc trắng được ưa chuộng nhờ tác dụng thanh nhiệt, dễ uống.</li>
+                    <li>Trà nụ hoa hồng Tây Tạng có giá cao hơn, vị đặc biệt hơn, nên ít phổ biến.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>- <strong>[TMX] Trà mix</strong></p>
+        <ul>
+            <li>Mặt hàng bán dễ nhất: [TMX01] Trà dưỡng nhan (46.46%)</li>
+            <li>Mặt hàng bán khó nhất: [TMX02] Trà cam sả quế (35.01%)</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà dưỡng nhan là xu hướng, đặc biệt thu hút phái nữ quan tâm đến sức khỏe và làm đẹp.</li>
+                    <li>Trà cam sả quế có mùi vị khá mạnh, không hợp khẩu vị số đông.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>- <strong>[TTC] Trà củ, quả sấy</strong></p>
+        <ul>
+            <li>Mặt hàng bán dễ nhất: [TTC01] Trà gừng (70.43%)</li>
+            <li>Mặt hàng bán khó nhất: [TTC02] Cam lát (43.45%)</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà gừng là sản phẩm phổ biến, phù hợp với thời tiết lạnh, tốt cho sức khỏe.</li>
+                    <li>Cam lát có thể kén người dùng do vị chua, thường dùng pha chế hơn là uống trực tiếp.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q9.js' %}"></script>
+</body>
+</html>

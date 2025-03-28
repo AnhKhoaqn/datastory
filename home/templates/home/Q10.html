@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Xác suất bán hàng của Mặt hàng theo Nhóm hàng theo từng Tháng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-red">
+        <p>- <strong>[BOT] Bột</strong></p>
+        <ul>
+            <li>Mặt hàng: [BOT01] Bột cần tây</li>
+            <li>Xác suất bán cao nhất: Tháng 06</li>
+            <li>Xác suất bán thấp nhất: Tháng 12</li>
+            <li>Xu hướng: Ổn định, ít biến động.</li>
+            <li>Nguyên nhân: Bột cần tây chủ yếu phục vụ nhóm khách hàng quan tâm đến sức khỏe, không phụ thuộc nhiều vào mùa vụ.</li>
+        </ul>
+        
+        <p>- <strong>[SET] Set trà</strong></p>
+        <ul>
+            <li>Mặt hàng bán cao nhất: [SET03] Set 10 gói trà hoa cúc trắng (Tháng 06)</li>
+            <li>Mặt hàng bán thấp nhất: [SET07] Set 10 gói trà cam sả quế (Tháng 11)</li>
+            <li>Xu hướng: Biến động nhẹ, có xu hướng giảm vào cuối năm.</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà hoa cúc trắng được ưa chuộng vào mùa hè do tính mát.</li>
+                    <li>Trà cam sả quế có hương vị mạnh, kén người dùng hơn.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>- <strong>[THO] Trà hoa</strong></p>
+        <ul>
+            <li>Mặt hàng bán cao nhất: [THO03] Trà hoa cúc trắng (Tháng 06)</li>
+            <li>Mặt hàng bán thấp nhất: [THO04] Trà nụ hoa hồng Tây Tạng (Tháng 12)</li>
+            <li>Xu hướng: Tăng vào mùa hè, giảm vào mùa đông.</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà hoa thường được dùng để thanh nhiệt, giải độc nên bán chạy vào mùa hè.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>- <strong>[TMX] Trà mix</strong></p>
+        <ul>
+            <li>Mặt hàng bán cao nhất: [TMX01] Trà dưỡng nhan (Tháng 05)</li>
+            <li>Mặt hàng bán thấp nhất: [TMX02] Trà cam sả quế (Tháng 12)</li>
+            <li>Xu hướng: Giảm dần vào cuối năm.</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà dưỡng nhan được chị em phụ nữ quan tâm nhiều vào mùa hè.</li>
+                    <li>Trà cam sả quế có mùi nồng, ít được ưa chuộng vào mùa hè.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>- <strong>[TTC] Trà củ, quả sấy</strong></p>
+        <ul>
+            <li>Mặt hàng bán cao nhất: [TTC01] Trà gừng (Tháng 11)</li>
+            <li>Mặt hàng bán thấp nhất: [TTC02] Cam lát (Tháng 06)</li>
+            <li>Xu hướng: Tăng mạnh vào cuối năm.</li>
+            <li>Nguyên nhân:
+                <ul>
+                    <li>Trà gừng thường được ưa chuộng vào mùa lạnh để giữ ấm cơ thể.</li>
+                    <li>Cam lát có tính thanh mát, phù hợp với mùa hè hơn.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q10.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Doanh thu bán hàng theo Mặt hàng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-green">
+        <p>Mặt hàng bán chạy nhất: <strong>Bột cần tây</strong> (mã BOT01)
+        → Doanh thu: <strong>626,000,000 VND</strong> | Số lượng: <strong>15,650 SKU</strong></p>
+        
+        <p>Mặt hàng bán kém nhất: <strong>Set 10 gói trà gạo lứt 8 vị</strong> (mã SET06)
+        → Doanh thu: <strong>31,850,000 VND</strong> | Số lượng: <strong>910 SKU</strong></p>
+    </div>
+    
+    <div class="comment-red">
+        <p>- Mặt hàng bán chạy nhất là Bột cần tây vì lý do:</p>
+        <ul>
+            <li>Xu hướng sức khỏe: Bột cần tây đang rất phổ biến trong cộng đồng quan tâm đến sức khỏe, đặc biệt là những người quan tâm đến detox, giảm cân và làm đẹp.</li>
+            <li>Dễ sử dụng: Bột cần tây có thể pha uống nhanh chóng, phù hợp với người bận rộn.</li>
+            <li>Bột cần tây có giá trung bình khoảng 40,000 VND/SKU, nhưng vẫn bán chạy → chứng tỏ giá không phải là rào cản với sản phẩm này.</li>
+        </ul>
+
+        <p>- Mặt hàng bán kém nhất là Set 10 gói trà gạo lứt 8 vị vì lý do:</p>
+        <ul>
+            <li>Giá thành cao: Các set trà thường có giá cao hơn so với từng gói lẻ, có thể làm giảm động lực mua hàng của người tiêu dùng.</li>
+            <li>Một số khách hàng có thể chỉ thích một hoặc hai vị trà cụ thể thay vì mua cả set.</li>
+            <li>Không phải ai cũng thích uống trà gạo lứt, đặc biệt là khi có nhiều lựa chọn trà thảo mộc khác trên thị trường.</li>
+            <li>Set trà gạo lứt có giá trung bình thấp hơn (35,000 VND/SKU) nhưng vẫn bán kém → chứng tỏ vấn đề không nằm ở giá, mà có thể ở nhu cầu thấp hoặc chiến lược tiếp thị chưa hiệu quả.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q1.js' %}"></script>
+</body>
+</html>

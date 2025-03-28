@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Doanh thu bán hàng theo Nhóm hàng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-green">
+        <p>Nhóm hàng bán chạy nhất: <strong>Trà hoa</strong> (mã THO)
+        → Doanh thu: <strong>1,877,505,000 VND</strong> | Số lượng: <strong>22,743 SKU</strong></p>
+        
+        <p>Nhóm hàng bán kém nhất: <strong>Bột</strong> (mã BOT)
+        → Doanh thu: <strong>626,000,000 VND</strong> | Số lượng: <strong>15,650 SKU</strong></p>
+    </div>
+    
+    <div class="comment-red">
+        <p>- Nhóm hàng bán chạy nhất - Trà hoa (THO)</p>
+        <p>- Doanh thu: 1,877,505,000 VNĐ</p>
+        <p>- Số lượng bán: 22,743 SKU</p>
+        <p>- Lý do bán chạy:</p>
+        <ul>
+            <li>Xu hướng tiêu dùng: Trà hoa ngày càng phổ biến, đặc biệt với những người quan tâm đến sức khỏe, giảm cân, thanh lọc cơ thể.</li>
+            <li>Đa dạng sản phẩm: Nhóm trà hoa bao gồm nhiều loại như trà hoa nhài, trà hoa cúc, trà hoa atiso,… giúp đáp ứng nhiều sở thích của khách hàng.</li>
+            <li>Mức giá hợp lý: Trà hoa có giá thành phù hợp với nhiều phân khúc khách hàng, từ bình dân đến cao cấp.</li>
+            <li>Dễ dàng tiếp cận thị trường: Trà hoa có thể bán lẻ, đóng gói hoặc làm quà tặng, giúp mở rộng tệp khách hàng.</li>
+        </ul>
+        
+        <p>- Nhóm hàng bán kém nhất - Bột (BOT)</p>
+        <p>- Doanh thu: 626,000,000 VNĐ</p>
+        <p>- Số lượng bán: 15,650 SKU</p>
+        <p>- Lý do bán kém:</p>
+        <ul>
+            <li>Sản phẩm đặc thù: Nhóm hàng bột chủ yếu phục vụ một số khách hàng nhất định (ví dụ: người ăn kiêng, chăm sóc sức khỏe), không phổ biến như trà hoa.</li>
+            <li>Tần suất sử dụng thấp: Một số khách hàng mua bột cần tây hoặc bột khác nhưng không dùng thường xuyên, dẫn đến tốc độ tiêu thụ chậm.</li>
+            <li>Thị trường ngách: Không phải ai cũng quen với việc sử dụng bột trong chế độ ăn uống hàng ngày.</li>
+            <li>Marketing chưa đủ mạnh: Nhóm hàng bột có thể chưa được đầu tư quảng bá rộng rãi như trà hoa.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q2.js' %}"></script>
+</body>
+</html>

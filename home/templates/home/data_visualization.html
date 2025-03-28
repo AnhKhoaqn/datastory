@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng hợp các biểu đồ</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<style>
+    .tab-container { display: flex; margin-bottom: 10px; }
+    .tab { padding: 10px 20px; cursor: pointer; background: #ccc; margin-right: 5px; border-radius: 5px; transition: background 0.3s; }
+    .tab:hover { background: #aaa; }
+</style>
+<body>
+    <h3>Tổng hợp các biểu đồ</h3>
+
+    <div class="tab-container">
+        {% for i in "123456789101112" %}
+            <a class="tab" href="http://127.0.0.1:8000/home/Q{{ forloop.counter }}">
+                Q{{ forloop.counter }}
+            </a>
+        {% endfor %}
+    </div>
+</body>
+</html>

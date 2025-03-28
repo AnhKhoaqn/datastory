@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Xác suất bán hàng theo Nhóm hàng</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-green">
+        <p>Nhóm hàng bán dễ nhất: <strong>[TMX] Trà mix</strong> - Xác suất: <strong>54.53%</strong></p>
+        <p>Nhóm hàng bán khó nhất: <strong>[SET] Set trà</strong> - Xác suất: <strong>23.86%</strong></p>
+    </div>
+    
+    <div class="comment-red">
+        <p>- Trà mix (TMX) dễ bán nhất vì:</p>
+        <ul>
+            <li>Sản phẩm phổ biến, dễ tiêu thụ: Trà mix thường có hương vị đa dạng, phù hợp với nhiều đối tượng khách hàng.</li>
+            <li>Giá cả hợp lý: So với các dòng trà cao cấp hoặc set trà, trà mix thường có giá vừa phải, dễ tiếp cận.</li>
+            <li>Tính tiện lợi cao: Sản phẩm có thể được đóng gói nhỏ gọn, dễ sử dụng, phù hợp với nhu cầu thưởng trà hàng ngày hoặc làm quà tặng.</li>
+            <li>Chiến lược marketing và khuyến mãi: Trà mix có thể được quảng bá nhiều hơn hoặc đi kèm các chương trình ưu đãi giúp tăng tỷ lệ bán.</li>
+        </ul>
+        
+        <p>- Set trà (SET) khó bán nhất vì:</p>
+        <ul>
+            <li>Giá thành cao hơn: Set trà thường bao gồm nhiều sản phẩm đi kèm như hộp quà, ấm chén, hoặc nhiều loại trà, làm tăng giá trị đơn hàng, nhưng không phải khách nào cũng sẵn sàng chi trả.</li>
+            <li>Nhu cầu đặc thù: Set trà chủ yếu được mua làm quà tặng, nên nhu cầu không thường xuyên như các loại trà tiêu dùng hàng ngày.</li>
+            <li>Không phù hợp với thói quen mua sắm thường xuyên: Người tiêu dùng có xu hướng mua lẻ từng loại trà yêu thích thay vì mua cả set.</li>
+            <li>Tính mùa vụ cao: Do đặc thù thường làm quà biếu, set trà có thể bán chạy vào dịp Tết hoặc các ngày lễ nhưng khó tiêu thụ vào thời gian còn lại trong năm.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q7.js' %}"></script>
+</body>
+</html>

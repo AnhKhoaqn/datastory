@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Doanh thu bán hàng theo Ngày trong tuần</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+    </div>
+
+    <div class="comment-green">
+        <p>Ngày trong tuần bán chạy nhất: <strong>Saturday</strong>
+        → Doanh thu: <strong>768,158,000 VND</strong> | Số lượng: <strong>14,837 SKU</strong></p>
+        
+        <p>Ngày trong tuần bán kém nhất: <strong>Tuesday</strong>
+        → Doanh thu: <strong>618,372,000 VND</strong> | Số lượng: <strong>11,901 SKU</strong></p>
+    </div>
+    
+    <div class="comment-red">
+        <p>- Ngày bán chạy nhất - Thứ 7</p>
+        <p>- Doanh thu trung bình: 14,493,547 VNĐ</p>
+        <p>- Số lượng bán trung bình: 280 SKU</p>
+        <p>- Lý do bán chạy:</p>
+        <ul>
+            <li>Cuối tuần - Thời điểm mua sắm cao: Người tiêu dùng thường có xu hướng mua sắm vào cuối tuần, khi họ có thời gian rảnh để lựa chọn sản phẩm.</li>
+            <li>Nhu cầu mua sắm chuẩn bị cho tuần mới: Nhiều khách hàng có thói quen mua thực phẩm, đồ uống cho cả tuần vào thứ 7.</li>
+            <li>Các chương trình khuyến mãi cuối tuần: Các cửa hàng, sàn thương mại điện tử thường có các ưu đãi đặc biệt vào cuối tuần để thu hút khách hàng.</li>
+        </ul>
+        
+        <p>- Ngày bán kém nhất - Thứ 3</p>
+        <p>- Doanh thu trung bình: 11,891,769 VNĐ</p>
+        <p>- Số lượng bán trung bình: 229 SKU</p>
+        <p>- Lý do bán kém:</p>
+        <ul>
+            <li>Ngày giữa tuần - Ít người mua sắm: Thứ 3 thường là thời điểm khách hàng chưa có nhu cầu mua sắm nhiều vì họ đã mua hàng vào cuối tuần trước.</li>
+            <li>Hạn chế về thời gian: Ngày trong tuần thường bận rộn với công việc, ít người có thời gian đi mua sắm hay đặt hàng online.</li>
+            <li>Ít chương trình ưu đãi: Do không phải ngày cao điểm, nhiều doanh nghiệp không tập trung khuyến mãi vào ngày này.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q4.js' %}"></script>
+</body>
+</html>

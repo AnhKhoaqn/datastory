@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Biểu đồ tổng thành tiền</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h3>Doanh thu bán hàng theo Khung giờ</h3>
+    <div id="chart-container">
+        <div id="chart"></div>
+        <div id="legend"></div> 
+    </div>
+
+    <div class="comment-green">
+        <p>Khung giờ bán chạy nhất: <strong>18:00-18:59</strong>
+        → Doanh thu: <strong>325,231,000 VND</strong> | Số lượng: <strong>0.00 SKU</strong></p>
+        
+        <p>Khung giờ bán kém nhất: <strong>09:00-09:59</strong>
+        → Doanh thu: <strong>271,643,000 VND</strong> | Số lượng: <strong>0.00 SKU</strong></p>
+    </div>
+    
+    <div class="comment-red">
+        <p>- Khung giờ bán chạy nhất: 18:00 - 18:59</p>
+        <p>- Doanh thu trung bình: 895,953 VNĐ</p>
+        <p>- Số lượng SKU trung bình: 17 sản phẩm</p>
+        <p>- Lý do bán chạy:</p>
+        <ul>
+            <li>Đây là thời điểm khách hàng đã hoàn thành công việc và có thời gian rảnh để mua sắm. Nhiều người có thói quen lướt web và đặt hàng vào buổi tối, đặc biệt là trên các nền tảng thương mại điện tử.</li>
+        </ul>
+        
+        <p>- Khung giờ bán kém nhất: 09:00 - 09:59</p>
+        <p>- Doanh thu trung bình: 746,272 VNĐ</p>
+        <p>- Số lượng SKU trung bình: 14 sản phẩm</p>
+        <p>- Lý do bán kém:</p>
+        <ul>
+            <li>Đây là khung giờ buổi sáng, khách hàng chủ yếu tập trung vào công việc, ít có thời gian để mua sắm.</li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/Q6.js' %}"></script>
+</body>
+</html>
